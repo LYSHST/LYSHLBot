@@ -1,0 +1,46 @@
+{
+  "name": "LYSHLbot",
+  "version": "1.0.0",
+  "description": "LYSHLbot - OneBot Protocol Robot Framework",
+  "main": "backend/node/src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/node/src/index.js",
+    "dev": "node --watch backend/node/src/index.js",
+    "build": "node backend/node/scripts/build.js",
+    "install:windows": "scripts\\windows\\install.bat",
+    "install:linux": "bash scripts/linux/install.sh",
+    "test": "node backend/node/tests/run.js",
+    "lint": "eslint backend/node/src/",
+    "format": "prettier --write \"backend/node/src/**/*.js\""
+  },
+  "keywords": [
+    "robot",
+    "chatbot",
+    "onebot",
+    "websocket",
+    "framework"
+  ],
+  "author": "LYSHL",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "dotenv": "^16.3.1",
+    "chalk": "^5.3.0",
+    "figlet": "^1.7.0",
+    "winston": "^3.11.0",
+    "node-fetch": "^3.3.2",
+    "uuid": "^9.0.1",
+    "cors": "^2.8.5",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0"
+  }
+}

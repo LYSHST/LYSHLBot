@@ -1,0 +1,19 @@
+[Unit]
+Description=LYSHLbot - OneBot Protocol Robot Framework
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/lyshlbot
+ExecStart=/usr/bin/node backend/node/src/index.js
+Restart=always
+RestartSec=10
+StandardOutput=append:/var/log/lyshlbot/stdout.log
+StandardError=append:/var/log/lyshlbot/stderr.log
+
+Environment=NODE_ENV=production
+Environment=PORT=3000
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,69 @@
+# LYSHLbot 配置文件
+# 配置文件格式: YAML (也支持 JSON 格式)
+
+app:
+  name: "LYSHLbot"
+  version: "1.0.0"
+  host: "0.0.0.0"
+  port: 3000
+  env: "development"
+
+server:
+  enable: true
+  type: "express"
+  cors:
+    enabled: true
+    origins: ["*"]
+
+websocket:
+  enable: true
+  reverse_proxy:
+    enabled: true
+    path: "/ws/reverse"
+    reconnect_interval: 3000
+    max_reconnect_attempts: 10
+
+onebot:
+  enable: true
+  protocol: "v11"
+  access_token: ""
+  universal: "ws://127.0.0.1:3001"
+
+  adapters:
+    napcat:
+      enable: true
+      ws_url: "ws://127.0.0.1:3001"
+      reconnect: true
+      heartbeat:
+        interval: 15000
+        timeout: 30000
+
+logging:
+  level: "info"
+  file: "./logs/app.log"
+  max_size: "10m"
+  max_files: 5
+  console: true
+
+plugins:
+  enabled: true
+  directory: "./plugins"
+  auto_load: true
+
+platform:
+  windows: false
+  linux: false
+
+security:
+  rate_limit:
+    enabled: true
+    window_ms: 60000
+    max_requests: 100
+  auth:
+    enabled: false
+    api_key: ""
+
+advanced:
+  cluster: false
+  workers: 1
+  memory_limit: "512m"
