@@ -1,5 +1,7 @@
 # LYSHLbot 使用指南
 
+[点击打开文档](https://doc.styyds.qzz.io/)
+---
 ## 快速启动
 
 ### 方式一：一键启动（未修复）
