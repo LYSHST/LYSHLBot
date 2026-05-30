@@ -13,14 +13,11 @@ cd LYSHLBot
 安装依赖并启动
 ```
 npm install
-npm start
-```
-
-本框架专为Windows开发，其他系统需要用以下指令安装依赖并启动
-```
 npm audit fix --force
 npm start
 ```
+
+### 这是专门为Windows制作的的框架，其他系统可能会出现问题。
 
 ### 方式二：一键启动（未修复）
 直接双击运行 `启动.bat`，会自动检测并安装依赖，然后启动服务。
