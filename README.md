@@ -13,7 +13,6 @@ cd LYSHLBot
 安装依赖并启动
 ```
 npm install
-npm audit fix --force
 npm start
 ```
 
